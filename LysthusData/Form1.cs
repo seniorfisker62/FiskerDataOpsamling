@@ -25,6 +25,9 @@ namespace LysthusData
         public const int Sensor1Hum = 2;
         public const int Sensor2Temp = 3;
         public const int Sensor2Hum = 4;
+        public const int Blaeservarme = 9;
+        public const int Olievarme = 10;
+
         public const int LampON = 5;
         public const int LampOFF = 6;
         public const int idle = 0;
@@ -58,7 +61,7 @@ namespace LysthusData
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Lysthus Data 1.0.1";
+            this.Text = "Lysthus Data 2.0.0";
             cntminute = 30;            
             addlog("program start");
             chkMongoDBgem.Checked = true;
@@ -176,32 +179,32 @@ namespace LysthusData
                         returnData = Encoding.ASCII.GetString(receiveBytes);
                         if (returnData == null) { returnData = string.Empty; }
                         lblHum2.Text = returnData.ToString();
-                    }                    
+                    }
+
+
+                    // blaeser time   
+                    sendBytes = Encoding.ASCII.GetBytes(Blaeservarme.ToString());
+                    udpClient.SendTo(sendBytes, sendReceiveEndPoint);
+                    returnData = string.Empty;
+                    receiveBytes = clientReturn.Receive(ref sendReceiveEndPoint);
+                    returnData = Encoding.ASCII.GetString(receiveBytes);
+                    if (returnData == null) { returnData = string.Empty; }
+                    lblBlaeser.Text = returnData.ToString();
+
+                    // olievarme time   
+                    sendBytes = Encoding.ASCII.GetBytes(Olievarme.ToString());
+                    udpClient.SendTo(sendBytes, sendReceiveEndPoint);
+                    returnData = string.Empty;
+                    receiveBytes = clientReturn.Receive(ref sendReceiveEndPoint);
+                    returnData = Encoding.ASCII.GetString(receiveBytes);
+                    if (returnData == null) { returnData = string.Empty; }
+                    lblOlie.Text = returnData.ToString();
 
                     if (chkMongoDBgem.Checked)
                     {
                         newMongoData();
                     }
-
-                    if (lampstate == change)
-                    {
-                        if (butLamp.BackColor == Color.Red)
-                        {
-                            sendBytes = Encoding.ASCII.GetBytes(LampON.ToString());
-                            butLamp.BackColor = Color.Green;
-                            lampstate = on;
-                        }
-                        else
-                        {
-                            sendBytes = Encoding.ASCII.GetBytes(LampOFF.ToString());
-                            butLamp.BackColor = Color.Red;
-                            lampstate = off;
-                        }
-                        udpClient.SendTo(sendBytes, sendReceiveEndPoint);
-                        returnData = string.Empty;
-                        receiveBytes = clientReturn.Receive(ref sendReceiveEndPoint);
-                        returnData = Encoding.ASCII.GetString(receiveBytes);
-                    }
+                    
                     TimetoMeasure = false;
                     sendReceiveEndPoint = null;
                     udpClient.Close();
@@ -295,6 +298,11 @@ namespace LysthusData
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
