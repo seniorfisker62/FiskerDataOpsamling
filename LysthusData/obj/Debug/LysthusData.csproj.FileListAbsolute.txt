@@ -31,3 +31,36 @@ C:\Dropbox\Development\Lysthus Dataopsamling\LysthusData\LysthusData\obj\Debug\L
 C:\Dropbox\Development\Lysthus Dataopsamling\LysthusData\LysthusData\obj\Debug\LysthusData.exe.manifest
 C:\Dropbox\Development\Lysthus Dataopsamling\LysthusData\LysthusData\obj\Debug\LysthusData.application
 C:\Dropbox\Development\Lysthus Dataopsamling\LysthusData\LysthusData\obj\Debug\LysthusData.csprojAssemblyReference.cache
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\mongocrypt.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\LysthusData.exe.config
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\LysthusData.exe.manifest
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\LysthusData.application
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\LysthusData.exe
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\LysthusData.pdb
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\Crc32C.NET.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\DnsClient.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\MongoDB.Bson.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\MongoDB.Driver.Core.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\MongoDB.Driver.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\MongoDB.Libmongocrypt.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\SharpCompress.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\Snappy.NET.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\System.Buffers.dll
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\Crc32C.NET.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\DnsClient.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\MongoDB.Bson.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\MongoDB.Driver.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\MongoDB.Driver.Core.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\Snappy.NET.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\bin\Debug\System.Buffers.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.csprojAssemblyReference.cache
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.Form1.resources
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.Properties.Resources.resources
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.csproj.GenerateResource.cache
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.csproj.CoreCompileInputs.cache
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.TrustInfo.xml
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.exe.manifest
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.application
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.csproj.CopyComplete
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.exe
+C:\lysthusdata\FiskerDataOpsamling\LysthusData\obj\Debug\LysthusData.pdb
