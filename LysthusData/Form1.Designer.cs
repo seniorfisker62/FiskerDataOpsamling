@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.butLamp = new System.Windows.Forms.Button();
             this.chkSensor2 = new System.Windows.Forms.CheckBox();
             this.chkSensor1 = new System.Windows.Forms.CheckBox();
             this.lblHum2 = new System.Windows.Forms.Label();
@@ -54,20 +53,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblBlaeser = new System.Windows.Forms.Label();
+            this.lblOlie = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // butLamp
-            // 
-            this.butLamp.BackColor = System.Drawing.Color.Crimson;
-            this.butLamp.Location = new System.Drawing.Point(12, 252);
-            this.butLamp.Name = "butLamp";
-            this.butLamp.Size = new System.Drawing.Size(75, 23);
-            this.butLamp.TabIndex = 15;
-            this.butLamp.Text = "Lamp on/off";
-            this.butLamp.UseVisualStyleBackColor = false;
-            this.butLamp.Click += new System.EventHandler(this.butLamp_Click);
             // 
             // chkSensor2
             // 
@@ -267,7 +261,7 @@
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(450, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(453, 24);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -292,38 +286,88 @@
             // 
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(450, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(453, 24);
             this.menuStrip2.TabIndex = 28;
             this.menuStrip2.Text = "menuStrip2";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblOlie);
+            this.groupBox3.Controls.Add(this.lblBlaeser);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 217);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(257, 67);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Varme";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Blæser";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Olie";
+            // 
+            // lblBlaeser
+            // 
+            this.lblBlaeser.AutoSize = true;
+            this.lblBlaeser.Location = new System.Drawing.Point(96, 20);
+            this.lblBlaeser.Name = "lblBlaeser";
+            this.lblBlaeser.Size = new System.Drawing.Size(13, 13);
+            this.lblBlaeser.TabIndex = 2;
+            this.lblBlaeser.Text = "0";
+            // 
+            // lblOlie
+            // 
+            this.lblOlie.AutoSize = true;
+            this.lblOlie.Location = new System.Drawing.Point(93, 48);
+            this.lblOlie.Name = "lblOlie";
+            this.lblOlie.Size = new System.Drawing.Size(13, 13);
+            this.lblOlie.TabIndex = 3;
+            this.lblOlie.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 287);
+            this.ClientSize = new System.Drawing.Size(453, 309);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chkMongoDBgem);
             this.Controls.Add(this.chkContMeasure);
-            this.Controls.Add(this.butLamp);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button butLamp;
         private System.Windows.Forms.CheckBox chkSensor2;
         private System.Windows.Forms.CheckBox chkSensor1;
         private System.Windows.Forms.Label lblHum2;
@@ -348,6 +392,11 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTimerSec;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblOlie;
+        private System.Windows.Forms.Label lblBlaeser;
     }
 }
 
