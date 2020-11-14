@@ -54,10 +54,15 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblOlieHour = new System.Windows.Forms.Label();
+            this.lblBlaeserHour = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblBlaeser = new System.Windows.Forms.Label();
-            this.lblOlie = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBlaeserMin = new System.Windows.Forms.Label();
+            this.lblBlaeserSec = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblOlieMin = new System.Windows.Forms.Label();
+            this.lblOlieSec = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -292,8 +297,13 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lblOlie);
-            this.groupBox3.Controls.Add(this.lblBlaeser);
+            this.groupBox3.Controls.Add(this.lblOlieSec);
+            this.groupBox3.Controls.Add(this.lblOlieMin);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.lblBlaeserSec);
+            this.groupBox3.Controls.Add(this.lblBlaeserMin);
+            this.groupBox3.Controls.Add(this.lblOlieHour);
+            this.groupBox3.Controls.Add(this.lblBlaeserHour);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(12, 217);
@@ -302,6 +312,33 @@
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Varme";
+            // 
+            // lblOlieHour
+            // 
+            this.lblOlieHour.AutoSize = true;
+            this.lblOlieHour.Location = new System.Drawing.Point(89, 37);
+            this.lblOlieHour.Name = "lblOlieHour";
+            this.lblOlieHour.Size = new System.Drawing.Size(13, 13);
+            this.lblOlieHour.TabIndex = 3;
+            this.lblOlieHour.Text = "0";
+            // 
+            // lblBlaeserHour
+            // 
+            this.lblBlaeserHour.AutoSize = true;
+            this.lblBlaeserHour.Location = new System.Drawing.Point(89, 20);
+            this.lblBlaeserHour.Name = "lblBlaeserHour";
+            this.lblBlaeserHour.Size = new System.Drawing.Size(13, 13);
+            this.lblBlaeserHour.TabIndex = 2;
+            this.lblBlaeserHour.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Olie";
             // 
             // label4
             // 
@@ -312,32 +349,50 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Blæser";
             // 
-            // label6
+            // lblBlaeserMin
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Olie";
+            this.lblBlaeserMin.AutoSize = true;
+            this.lblBlaeserMin.Location = new System.Drawing.Point(111, 20);
+            this.lblBlaeserMin.Name = "lblBlaeserMin";
+            this.lblBlaeserMin.Size = new System.Drawing.Size(13, 13);
+            this.lblBlaeserMin.TabIndex = 4;
+            this.lblBlaeserMin.Text = "0";
             // 
-            // lblBlaeser
+            // lblBlaeserSec
             // 
-            this.lblBlaeser.AutoSize = true;
-            this.lblBlaeser.Location = new System.Drawing.Point(96, 20);
-            this.lblBlaeser.Name = "lblBlaeser";
-            this.lblBlaeser.Size = new System.Drawing.Size(13, 13);
-            this.lblBlaeser.TabIndex = 2;
-            this.lblBlaeser.Text = "0";
+            this.lblBlaeserSec.AutoSize = true;
+            this.lblBlaeserSec.Location = new System.Drawing.Point(134, 20);
+            this.lblBlaeserSec.Name = "lblBlaeserSec";
+            this.lblBlaeserSec.Size = new System.Drawing.Size(13, 13);
+            this.lblBlaeserSec.TabIndex = 5;
+            this.lblBlaeserSec.Text = "0";
             // 
-            // lblOlie
+            // label7
             // 
-            this.lblOlie.AutoSize = true;
-            this.lblOlie.Location = new System.Drawing.Point(93, 48);
-            this.lblOlie.Name = "lblOlie";
-            this.lblOlie.Size = new System.Drawing.Size(13, 13);
-            this.lblOlie.TabIndex = 3;
-            this.lblOlie.Text = "0";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(89, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "h.    m.     s.";
+            // 
+            // lblOlieMin
+            // 
+            this.lblOlieMin.AutoSize = true;
+            this.lblOlieMin.Location = new System.Drawing.Point(110, 37);
+            this.lblOlieMin.Name = "lblOlieMin";
+            this.lblOlieMin.Size = new System.Drawing.Size(13, 13);
+            this.lblOlieMin.TabIndex = 7;
+            this.lblOlieMin.Text = "0";
+            // 
+            // lblOlieSec
+            // 
+            this.lblOlieSec.AutoSize = true;
+            this.lblOlieSec.Location = new System.Drawing.Point(134, 37);
+            this.lblOlieSec.Name = "lblOlieSec";
+            this.lblOlieSec.Size = new System.Drawing.Size(13, 13);
+            this.lblOlieSec.TabIndex = 8;
+            this.lblOlieSec.Text = "0";
             // 
             // Form1
             // 
@@ -395,8 +450,13 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblOlie;
-        private System.Windows.Forms.Label lblBlaeser;
+        private System.Windows.Forms.Label lblOlieHour;
+        private System.Windows.Forms.Label lblBlaeserHour;
+        private System.Windows.Forms.Label lblBlaeserSec;
+        private System.Windows.Forms.Label lblBlaeserMin;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblOlieSec;
+        private System.Windows.Forms.Label lblOlieMin;
     }
 }
 
