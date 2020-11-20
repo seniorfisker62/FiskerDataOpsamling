@@ -45,8 +45,10 @@ namespace LysthusData
         public bool MongoDBchecked = false;
         public int cntminute = 0;
         public int blaeserMSec = 0;
+        public int blaeserSec = 0;
         public int olieMSec = 0;
-        
+        public int olieSec = 0;
+
         //Port and IP Data for Socket Client
         IPAddress IP = IPAddress.Parse("192.168.0.3");
         public int port = 8888;
@@ -63,7 +65,7 @@ namespace LysthusData
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Lysthus Data 2.0.1";
+            this.Text = "Lysthus Data 2.0.2";
             cntminute = 30;            
             addlog("program start");
             chkMongoDBgem.Checked = true;
@@ -191,8 +193,10 @@ namespace LysthusData
                     receiveBytes = clientReturn.Receive(ref sendReceiveEndPoint);
                     returnData = Encoding.ASCII.GetString(receiveBytes);
                     if (returnData == null) { returnData = string.Empty; }
-                    blaeserMSec += Int32.Parse(returnData);
-                    TimeSpan ts = TimeSpan.FromSeconds(blaeserMSec/1000);
+                    blaeserMSec = Int32.Parse(returnData);
+                    blaeserSec += blaeserMSec / 1000;
+                    blaeserMSec = 0;
+                    TimeSpan ts = TimeSpan.FromSeconds(blaeserSec);
                     lblBlaeserHour.Text = ts.Hours.ToString();
                     lblBlaeserMin.Text = ts.Minutes.ToString();
                     lblBlaeserSec.Text = ts.Seconds.ToString();
@@ -204,8 +208,10 @@ namespace LysthusData
                     receiveBytes = clientReturn.Receive(ref sendReceiveEndPoint);
                     returnData = Encoding.ASCII.GetString(receiveBytes);
                     if (returnData == null) { returnData = string.Empty; }
-                    olieMSec += Int32.Parse(returnData);
-                    ts = TimeSpan.FromSeconds(olieMSec / 1000);
+                    olieMSec = Int32.Parse(returnData);
+                    olieSec += olieMSec / 1000;
+                    olieMSec = 0;
+                    ts = TimeSpan.FromSeconds(olieSec);
                     lblOlieHour.Text = ts.Hours.ToString();
                     lblOlieMin.Text = ts.Minutes.ToString();
                     lblOlieSec.Text = ts.Seconds.ToString();
